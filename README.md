@@ -1,20 +1,19 @@
 # sorting_algorithms_project
 
-- [ ] insertion sort - Элина
+- [ ] insertion sort
 
-- [ ] selection sort - Яна
+- [ ] selection sort
 
-- [ ] bubble sort - Никита
+- [ ] bubble sort
 
-- [ ] quick sort - Элина
+- [ ] quick sort
 
-- [ ] heap sort - Яна
+- [ ] heap sort
 
-- [ ] tim sort - Никита
+- [ ] tim sort
 
-- [ ] intro sort - Элина 
+- [ ] intro sort 
 
-- [ ] merge sort - Яна
+- [ ] merge sort
 
-- [ ] counting sort - Никита
-
+- [ ] counting sort 
