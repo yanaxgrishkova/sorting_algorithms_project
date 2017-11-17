@@ -1,6 +1,6 @@
 # sorting_algorithms_project
 
-- [ ] insertion sort
+- [x] insertion sort
 
 - [ ] selection sort
 
