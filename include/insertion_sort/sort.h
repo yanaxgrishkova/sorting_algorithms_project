@@ -1,6 +1,6 @@
 #include <iostream>
 
-void insertion_sort(int array[], int length)
+void insertion_sort(int *array, int length)
 {
 	for (int i = 1; i < length; ++i)
 	{
