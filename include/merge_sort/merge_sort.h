@@ -56,7 +56,9 @@ void merge(int *array, int *buffer, int left, int middle, int right)
 	}
 
 	for (int i = 0; i < it_left + it_right; i++)
+	{
 		array[left + i] = buffer[i];
+	}
 }
 
 void merge_sort(int *array, int *buffer, int left, int right)
