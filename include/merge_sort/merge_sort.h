@@ -33,7 +33,9 @@ void merge(T *array, T *buffer, int left, int middle, int right)
 	}
 
 	for (int i = 0; i < _left + _right; i++)
+	{
 		array[left + i] = buffer[i];
+	}
 }
 
 template <typename T>
