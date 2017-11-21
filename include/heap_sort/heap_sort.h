@@ -1,37 +1,38 @@
 #include <iostream>
-#include <ctime>
 
-void heapify(int *array, int n, int i)
+template <typename T>
+void heapify(T *array, unsigned int size, unsigned int i)
 {
-	int largest = i;
-	int l = 2 * i + 1;
-	int r = 2 * i + 2;
+	unsigned int largest = i;
+	unsigned int _left = 2 * i + 1;
+	unsigned int _right = 2 * i + 2;
 
-	if (l < n && array[l] > array[largest])
+	if (_left < size && array[_left] > array[largest])
 	{
-		largest = l;
+		largest = _left;
 	}
-	
-	if (r < n && array[r] > array[largest])
+
+	if (_right < size && array[_right] > array[largest])
 	{
-		largest = r;
+		largest = _right;
 	}
-	
+
 	if (largest != i)
 	{
 		std::swap(array[i], array[largest]);
-		heapify(array, n, largest);
+		heapify(array, size, largest);
 	}
 }
 
-void heap_sort(int *array, int n)
+template <typename T>
+void heap_sort(T *array, unsigned int size)
 {
-	for (int i = n / 2 - 1; i >= 0; i--)
+	for (unsigned int i = size / 2 - 1; i >= 0; i--)
 	{
-		heapify(array, n, i);
+		heapify(array, size, i);
 	}
 
-	for (int i = n - 1; i >= 0; i--)
+	for (unsigned int i = size - 1; i >= 0; i--)
 	{
 		std::swap(array[0], array[i]);
 		heapify(array, i, 0);
