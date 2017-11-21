@@ -1,6 +1,6 @@
 # sorting_algorithms_project
 
-- [x] insertion sort - Яна
+- [ ] insertion sort - Яна
 - [ ] selection sort - Никита
 - [ ] bubble sort - Эля
 - [ ] heap sort - Яна
