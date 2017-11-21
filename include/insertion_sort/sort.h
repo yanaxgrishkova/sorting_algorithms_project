@@ -1,10 +1,11 @@
 #include <iostream>
 
-void insertion_sort(int *array, int length)
+template <typename T>
+void insertion_sort(T *array, unsigned int size)
 {
-	for (int i = 1; i < length; ++i)
+	for (unsigned int i = 1; i < size; ++i)
 	{
-		for (int j = i; j > 0 && array[j - 1] > array[j]; --j)
+		for (unsigned int j = i; j > 0 && array[j - 1] > array[j]; --j)
 		{
 			std::swap(array[j - 1], array[j]);
 		}
