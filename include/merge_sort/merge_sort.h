@@ -1,67 +1,43 @@
 #include <iostream>
-#include <ctime>
 
-static bool less(const int &a, const int &b)
+template <typename T>
+void merge(T *array, T *buffer, int left, int middle, int right)
 {
-	return a < b;
-}
+	int _left = 0;
+	int _right = 0;
 
-void print(int *array, int n)
-{
-	for (int i = 0; i < n; i++)
+	while (left + _left < middle && middle + _right < right)
 	{
-		std::cout << array[i] << " ";
-	}
-	std::cout << std::endl;
-}
-
-void randomize(int *array, int n)
-{
-	srand(time(NULL));
-	for (int i = 0; i < n; i++)
-	{
-		array[i] = rand() % 100;
-	}
-}
-
-void merge(int *array, int *buffer, int left, int middle, int right)
-{
-	int it_left = 0;
-	int it_right = 0;
-
-	while (left + it_left < middle && middle + it_right < right)
-	{
-		if (less(array[left + it_left], array[middle + it_right]))
+		if (less(array[left + _left], array[middle + _right]))
 		{
-			buffer[it_left + it_right] = array[left + it_left];
-			it_left++;
+			buffer[_left + _right] = array[left + _left];
+			_left++;
 		}
 		else
 		{
-			buffer[it_left + it_right] = array[middle + it_right];
-			it_right++;
+			buffer[_left + _right] = array[middle + _right];
+			_right++;
 		}
 	}
 
-	while (left + it_left < middle)
+	while (left + _left < middle)
 	{
-		buffer[it_left + it_right] = array[left + it_left];
-		it_left++;
+		buffer[_left + _right] = array[left + _left];
+		_left++;
 	}
 
-	while (middle + it_right < right)
+	while (middle + _right < right)
 	{
-		buffer[it_left + it_right] = array[middle + it_right];
-		it_right++;
+		buffer[_left + _right] = array[middle + _right];
+		_right++;
 	}
 
-	for (int i = 0; i < it_left + it_right; i++)
-	{
+	for (int i = 0; i < _left + _right; i++)
 		array[left + i] = buffer[i];
-	}
 }
 
-void merge_sort(int *array, int *buffer, int left, int right)
+template <typename T>
+void merge_sort(T *array, T *buffer, int left, int right)
 {
 	if (right - left <= 1)
 	{
