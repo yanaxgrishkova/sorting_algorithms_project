@@ -1,7 +1,7 @@
 #include <iostream>
 template <typename Iterator>
 
-  void bubble_sort(Iterator fisrt, Iterator last)
+  void bubble_sort(Iterator first, Iterator last)
 {
     while(first <-- last)
         for(Iterator i = first; i < last; ++i)
