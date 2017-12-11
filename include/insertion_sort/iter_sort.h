@@ -1,17 +1,30 @@
-#include <iostream>
+#pragma once
 
-template <typename Iterator>
-void insertion_sort(Iterator first, Iterator last)
+#include <algorithm>
+
+namespace sortings
 {
-	if (first >= last)
+	class InsertionSort
 	{
-		return;
-	}
-	for (Iterator i = first; i != last; ++i)
-	{
-		for (Iterator j = i; (j != first) && (*j < *(j - 1)); --j)
+	public:
+
+		template< class RandomAccessIterator, class Compare >
+		static void sort( RandomAccessIterator first, RandomAccessIterator last)
 		{
-			std::iter_swap((j - 1), j);
+			if (first == last)
+				return;
+
+			for (auto i = first; i != last; ++i)
+			{
+				for (auto j = i; (j != first) && (*j < *(j - 1)); --j)
+				{
+					std::iter_swap((j - 1), j);
+				}
+			}
 		}
-	}
+
+	private:
+		InsertionSort();
+		~InsertionSort();
+	};
 }
