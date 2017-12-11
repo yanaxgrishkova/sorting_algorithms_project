@@ -1,6 +1,6 @@
 #pragma once
 
-#include <algorithm>    // std::swap
+#include <algorithm>
 #include <iterator>
 #include <typeinfo>  
 
