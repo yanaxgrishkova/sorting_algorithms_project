@@ -4,8 +4,8 @@
 - [ ] selection sort - Никита
 - [ ] bubble sort - Эля
 - [ ] heap sort - Яна
-- [ ] quick sort - Никита
+- [ ] merge sort - Никита
 - [ ] tim sort - Эля
-- [ ] merge sort - Яна
+- [ ] quick sort - Яна
 - [ ] intro sort - Никита
 - [ ] counting sort - Эля
