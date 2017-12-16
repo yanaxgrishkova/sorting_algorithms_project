@@ -2,7 +2,7 @@
 #include <vector>
 #include <algorithm>
 
-#include <insertion_sort.h>
+#include <sort.h>
 #include <merge_sort.h>
 
 template <typename Iterator>
