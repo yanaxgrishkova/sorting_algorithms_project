@@ -5,8 +5,8 @@
 - [ ] insertion sort - Яна
 - [ ] tim sort - Никита
 - [ ] bubble sort - Эля
-- [ ] heap sort - Яна
-- [ ] merge sort - Никита
+- [ ] merge sort - Яна
+- [ ] heap sort - Никита
 - [ ] selection sort - Эля
 - [ ] quick sort - Яна
 - [ ] intro sort - Никита
