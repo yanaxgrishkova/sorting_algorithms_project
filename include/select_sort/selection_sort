@@ -3,19 +3,18 @@
 
 using namespace std;
 
-template<typename iterator>
-void selSort(iterator begin, iterator end)
+template<typename Iterator>
+void selSort(Iterator begin, Iterator end)
 {
-  iterator minIt;  
-  iterator it2;
+  Iterator min; Iterator it;
   
-  for(iterator it = begin; it != end; ++it)
+  for(Iterator i = begin; i != end; ++i)
   {
-    minIt = it;
-    for(it2 = it + 1; it2 != end; ++it2)
+    min = i;
+    for(it = i + 1; it!= end; ++it)
     {
-      if(*it2 < *minIt)
-        swap(*it2, *minIt);
+      if(*it < *min)
+        swap(*it, *min);
     }   
   }
 }
