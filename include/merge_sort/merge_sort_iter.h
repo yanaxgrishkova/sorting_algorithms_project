@@ -1,34 +1,45 @@
-#pragma once
+#include <iostream>
+#include <utility>
 
-#include <algorithm> 
-
-template <typename Iterator>
-void sort(Iterator first, Iterator last, Iterator firstCopy, long lo, long hi, Compare& comp )
+template <typename Iterator, typename LessThan>
+void mergeSortInPlace(Iterator first, Iterator last, LessThan lessThan, size_t size = 0)
 {
-	if( hi <= lo ) 
+	if (size == 0 && first != last)
+		size = std::distance(first, last);
+
+	if (size <= 1)
 		return;
-	long mid = lo + ( hi - lo ) / 2;
-	sort( first, last, firstCopy, lo, mid, comp );
-	sort( first, last, firstCopy, mid + 1, hi, comp );
-	merge( first, last, firstCopy, lo, mid, hi, comp );
+	
+	size_t firstHalf = size / 2;
+	size_t secondHalf = size - firstHalf;
+	Iterator mid = first;
+	std::advance(mid, firstHalf);
+	
+	mergeSortInPlace(first, mid, lessThan, firstHalf);
+	mergeSortInPlace(mid, last, lessThan, secondHalf);
+	
+	Iterator right = mid;
+	while (first != mid)
+	{
+		if (lessThan(*right, *first))
+		{
+			typename std::iterator_traits<Iterator>::value_type misplaced =
+				std::move(*first);
+			*first = std::move(*right);
+			Iterator scan = right;
+			Iterator next = scan;
+			++next;
+			while (next != last && lessThan(*next, misplaced))
+				*scan++ = std::move(*next++);
+			*scan = std::move(misplaced);
+		}
+		++first;
+	}
 }
 
 template <typename Iterator>
-void merge(Iterator first, Iterator last, Iterator firstCopy, long lo, long mid, long hi, Compare& comp)
+void mergeSortInPlace(Iterator first, Iterator last)
 {
-	std::copy( first + lo, first + hi, firstCopy + lo );
-
-	auto i = lo, j = mid + 1;
-      
-	for( auto k = lo; k != (hi + 1); k++ )
-	{
-		if	( i > mid )								
-			first[k] = firstCopy[j++];
-		else if	( j > hi )								
-			first[k] = firstCopy[i++];
-		else if ( comp( firstCopy[j], firstCopy[i] ) )	
-			first[k] = firstCopy[j++];
-		else											
-			first[k] = firstCopy[i++];
-	}
+	mergeSortInPlace(first, last,
+		std::less<typename std::iterator_traits<Iterator>::value_type>());
 }
