@@ -1,0 +1,21 @@
+#include <iostream>
+#include <iterator>
+
+using namespace std;
+
+template<typename iterator>
+void selSort(iterator begin, iterator end)
+{
+  iterator minIt;  
+  iterator it2;
+  
+  for(iterator it = begin; it != end; ++it)
+  {
+    minIt = it;
+    for(it2 = it + 1; it2 != end; ++it2)
+    {
+      if(*it2 < *minIt)
+        swap(*it2, *minIt);
+    }   
+  }
+}
