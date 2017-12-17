@@ -2,29 +2,15 @@
 
 #include <algorithm>
 
-namespace sortings
+template typename Iterator>
+void sort (Iterator first, Iterator last)
 {
-	class InsertionSort
+	if (first == last)
+		return;
+	for (auto i = first; i != last; ++i)
 	{
-	public:
-
-		template< class RandomAccessIterator, class Compare >
-		static void sort( RandomAccessIterator first, RandomAccessIterator last)
-		{
-			if (first == last)
-				return;
-
-			for (auto i = first; i != last; ++i)
-			{
-				for (auto j = i; (j != first) && (*j < *(j - 1)); --j)
-				{
-					std::iter_swap((j - 1), j);
-				}
-			}
-		}
-
-	private:
-		InsertionSort();
-		~InsertionSort();
-	};
+		for (auto j = i; (j != first) && (*j < *(j - 1)); --j)
+		{				
+				std::iter_swap((j - 1), j);
+		}	
 }
