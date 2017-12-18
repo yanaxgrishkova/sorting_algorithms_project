@@ -2,14 +2,15 @@
 
 # sorting_algorithms_project
 
+**Алгоритм сортировки — это алгоритм для упорядочивания элементов в списке.
+
+В своей работе мы рассматриваем следующие алгоритмы:
+
 - [x] insertion sort - Яна
-- [ ] tim sort - Никита
 - [x] bubble sort - Эля
 - [x] merge sort - Яна
-- [ ] heap sort - Никита
 - [x] selection sort - Эля
 - [x] quick sort - Яна
-- [ ] intro sort - Никита
 - [x] counting sort - Эля
 
 # Техническое задание: 
