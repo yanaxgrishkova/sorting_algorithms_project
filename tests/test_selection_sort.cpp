@@ -6,7 +6,7 @@
 
 //////////////////////////////////// Сортировка рандомных массивов длины 1, 10, 100, 500 и 1000 ////////////////////////////////////
 
-TEST_CASE("selestion_sort", "size = 1") 
+TEST_CASE("selestion_sort") 
 {
 	srand(time(NULL));
 	const int size = 1;
@@ -28,7 +28,7 @@ TEST_CASE("selestion_sort", "size = 1")
 	}
 }
 
-TEST_CASE("selestion_sort_10", "size = 10") 
+TEST_CASE("selestion_sort_10") 
 {
 	srand(time(NULL));
 	const int size = 10;
@@ -50,7 +50,7 @@ TEST_CASE("selestion_sort_10", "size = 10")
 	}
 }
 
-TEST_CASE("selestion_sort_100", "size = 100") 
+TEST_CASE("selestion_sort_100") 
 {
 	srand(time(NULL));
 	const int size = 100;
@@ -72,7 +72,7 @@ TEST_CASE("selestion_sort_100", "size = 100")
 	}
 }
 
-TEST_CASE("selestion_sort_500", "size = 500") 
+TEST_CASE("selestion_sort_500") 
 {
 	srand(time(NULL));
 	const int size = 500;
@@ -94,7 +94,7 @@ TEST_CASE("selestion_sort_500", "size = 500")
 	}
 }
 
-TEST_CASE("selestion_sort_1000", "size = 1000") 
+TEST_CASE("selestion_sort_1000") 
 {
 	srand(time(NULL));
 	const int size = 1000;
@@ -118,7 +118,7 @@ TEST_CASE("selestion_sort_1000", "size = 1000")
 
 //////////////////////////////////// Сортировка обратных массивов длины 10, 100, 500 и 1000 ////////////////////////////////////
 
-TEST_CASE("selestion_sort_1_10, "size = 10") 
+TEST_CASE("selestion_sort_1_10") 
 {
 	srand(time(NULL));
 	const int size = 10;
@@ -140,7 +140,7 @@ TEST_CASE("selestion_sort_1_10, "size = 10")
 	}
 }
 
-TEST_CASE("selestion_sort_1_100, "size = 100") 
+TEST_CASE("selestion_sort_1_100") 
 {
 	srand(time(NULL));
 	const int size = 100;
@@ -162,7 +162,7 @@ TEST_CASE("selestion_sort_1_100, "size = 100")
 	}
 }
 
-TEST_CASE("selestion_sort_1_500, "size = 500") 
+TEST_CASE("selestion_sort_1_500") 
 {
 	srand(time(NULL));
 	const int size = 500;
@@ -184,7 +184,7 @@ TEST_CASE("selestion_sort_1_500, "size = 500")
 	}
 }
 	  
-TEST_CASE("selestion_sort_1_1000, "size = 1000") 
+TEST_CASE("selestion_sort_1_1000") 
 {
 	srand(time(NULL));
 	const int size = 1000;
