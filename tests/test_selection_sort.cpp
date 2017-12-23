@@ -18,6 +18,8 @@ TEST_CASE("selestion_sort")
   	}
   
 	selection_sort(&arr[0], &arr[size]);
+	
+	std::cout << "runtime = " << clock() / 1000.0 << std::endl;
   
 	std::vector<int> v(arr, arr + size);
 	std::sort(v.begin(), v.end());
