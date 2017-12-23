@@ -19,3 +19,7 @@ std::sort(sorted.begin(), sorted.end());
         REQUIRE(nosort[i] == sorted[i]);
   }
 }
+
+TEST_CASE ("N=50, int", "")
+{
+}
