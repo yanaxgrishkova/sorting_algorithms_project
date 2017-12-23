@@ -1,13 +1,25 @@
 #include <catch.hpp>
 
-#include "sorting_algorithms_project/include/quick_sort/quick_sort_iter.h"
+#include "selection_sort.h"
 
-TEST_CASE("QUICK SORT", "") 
+TEST_CASE("selestion_sort", "") 
 {
-  int arr[] = {0};
-  int* first = &arr[0];
-  int* last = &arr[0];
-  quick_sort(first, last);
-  REQUIRE(arr[0] == 0);
-}
+	srand(time(NULL));
+	const int size = 1;
+	int arr[size];
   
+	for (int i = 0; i < size; i++)
+  {
+		arr[i] = rand() % 1000;
+  }
+  
+	selection_sort(&arr[0], &arr[size]);
+  
+  std::vector<int> v(array, array + ARRAY_LEN);
+  std::sort(v.begin(), v.end());
+  
+  for (int i = 0; i < ARRAY_LEN; i++) 
+  {
+        REQUIRE(array[i] == v[i]);
+  }
+}
