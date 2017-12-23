@@ -11,7 +11,9 @@ TEST_CASE("N=10, int", "")
  for (int i = 0; i<N; i++)
  {
  nosort[i] = rand () % 1000;
- }
+ 
+ 
+ bubble_sort(&nosort[0], &nosort[N]);
 
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
@@ -20,8 +22,4 @@ std::sort(sorted.begin(), sorted.end());
   {
         REQUIRE(nosort[i] == sorted[i]);
   }
-}
-
-TEST_CASE ("N=50, int", "")
-{
 }
