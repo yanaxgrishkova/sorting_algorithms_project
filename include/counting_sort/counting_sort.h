@@ -3,19 +3,17 @@
 #include <algorithm>
 #include <vector>
 
-using namespace std;
-
 template<typename Iterator> 
-void counting_sort(Iterator begin, Iterator end) 
+void counting_sort(Iterator first, Iterator last) 
 {
-	auto min_max = minmax_element(begin, end);
+	auto min_max = std::minmax_element(begin, end);
 	if (min_max.first == min_max.second) 
 	{ 
 		return;
 	}
 	auto min = *min_max.first;
 	auto max = *min_max.second;
-	vector<int> c((max - min) + 1, 0);
+	std::vector<int> c((max - min) + 1, 0);
 	
 	for (auto i = begin; i != end; ++i) 
 	{
@@ -24,7 +22,7 @@ void counting_sort(Iterator begin, Iterator end)
 	
 	for (auto i = min; i <= max; ++i) 
 	{
-		for (int j = 0; j < c[i - min]; ++j) 
+		for (auto j = 0; j < c[i - min]; ++j) 
 		{
 			*begin++ = i;
 		}
