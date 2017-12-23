@@ -14,11 +14,11 @@ void quick_sort(Iterator first, Iterator last)
 template <typename Iterator>
 Iterator partition(Iterator first, Iterator last)
 {
-	auto pivot = *last;
+	auto temp = *last;
 	Iterator i = first - 1;
 	for (Iterator j = first; j < last - 1; ++j)
 	{
-		if (*j <= pivot)
+		if (*j <= temp)
 		{
 			i++;
 			std::swap(*i, *j);
