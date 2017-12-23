@@ -2,7 +2,7 @@
 
 #include "bubble_sort.h"
 
-TEST_CASE("N=10, int", "") 
+TEST_CASE("bubble_sort", "") 
 {
  srand(time(NULL));
  const int N = 10;
