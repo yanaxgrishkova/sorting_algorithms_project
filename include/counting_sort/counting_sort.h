@@ -6,7 +6,7 @@
 template<typename Iterator> 
 void counting_sort(Iterator first, Iterator last) 
 {
-	auto min_max = std::minmax_element(begin, end);
+	auto min_max = std::minmax_element(first, last);
 	if (min_max.first == min_max.second) 
 	{ 
 		return;
@@ -15,7 +15,7 @@ void counting_sort(Iterator first, Iterator last)
 	auto max = *min_max.second;
 	std::vector<int> c((max - min) + 1, 0);
 	
-	for (auto i = begin; i != end; ++i) 
+	for (auto i = first; i != last; ++i) 
 	{
 		++c[*i - min];
 	}
@@ -24,7 +24,7 @@ void counting_sort(Iterator first, Iterator last)
 	{
 		for (auto j = 0; j < c[i - min]; ++j) 
 		{
-			*begin++ = i;
+			*first++ = i;
 		}
 	}
 }
