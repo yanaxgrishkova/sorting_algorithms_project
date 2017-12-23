@@ -233,7 +233,7 @@ TEST_CASE("selestion_sort_2_10")
 	}
 }
 
-TEST_CASE("selestion_sort_1_100") 
+TEST_CASE("selestion_sort_2_100") 
 {
 	srand(time(NULL));
 	const int size = 100;
@@ -256,7 +256,7 @@ TEST_CASE("selestion_sort_1_100")
 }
 
 
-TEST_CASE("selestion_sort_1_100") 
+TEST_CASE("selestion_sort_2_1000") 
 {
 	srand(time(NULL));
 	const int size = 1000;
