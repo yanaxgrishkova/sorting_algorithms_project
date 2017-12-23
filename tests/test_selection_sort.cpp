@@ -17,16 +17,16 @@ TEST_CASE("selestion_sort", "size = 1")
   
 	selection_sort(&arr[0], &arr[size]);
   
-  std::vector<int> v(arr, arr + size);
-  std::sort(v.begin(), v.end());
+	std::vector<int> v(arr, arr + size);
+	std::sort(v.begin(), v.end());
   
-  for (int i = 0; i < size; i++) 
-  {
-        REQUIRE(arr[i] == v[i]);
-  }
+	for (int i = 0; i < size; i++) 
+	{
+		REQUIRE(arr[i] == v[i]);
+	}
 }
 
-TEST_CASE("selestion_sort", "size = 10") 
+TEST_CASE("selestion_sort_10", "size = 10") 
 {
 	srand(time(NULL));
 	const int size = 10;
@@ -39,16 +39,16 @@ TEST_CASE("selestion_sort", "size = 10")
   
 	selection_sort(&arr[0], &arr[size]);
   
-  std::vector<int> v(arr, arr + size);
-  std::sort(v.begin(), v.end());
+	std::vector<int> v(arr, arr + size);
+	std::sort(v.begin(), v.end());
   
-  for (int i = 0; i < size; i++) 
-  {
-        REQUIRE(arr[i] == v[i]);
-  }
+	for (int i = 0; i < size; i++) 
+	{
+		REQUIRE(arr[i] == v[i]);
+	}
 }
 
-TEST_CASE("selestion_sort", "size = 100") 
+TEST_CASE("selestion_sort_100", "size = 100") 
 {
 	srand(time(NULL));
 	const int size = 100;
@@ -61,16 +61,16 @@ TEST_CASE("selestion_sort", "size = 100")
   
 	selection_sort(&arr[0], &arr[size]);
   
-  std::vector<int> v(arr, arr + size);
-  std::sort(v.begin(), v.end());
+	std::vector<int> v(arr, arr + size);
+	std::sort(v.begin(), v.end());
   
-  for (int i = 0; i < size; i++) 
-  {
-        REQUIRE(arr[i] == v[i]);
-  }
+	for (int i = 0; i < size; i++) 
+	{
+		REQUIRE(arr[i] == v[i]);
+	}
 }
 
-TEST_CASE("selestion_sort", "size = 500") 
+TEST_CASE("selestion_sort_500", "size = 500") 
 {
 	srand(time(NULL));
 	const int size = 500;
@@ -83,16 +83,16 @@ TEST_CASE("selestion_sort", "size = 500")
   
 	selection_sort(&arr[0], &arr[size]);
   
-  std::vector<int> v(arr, arr + size);
-  std::sort(v.begin(), v.end());
+	std::vector<int> v(arr, arr + size);
+	std::sort(v.begin(), v.end());
   
-  for (int i = 0; i < size; i++) 
-  {
-        REQUIRE(arr[i] == v[i]);
-  }
+	for (int i = 0; i < size; i++) 
+	{
+		REQUIRE(arr[i] == v[i]);
+	}
 }
 
-TEST_CASE("selestion_sort", "size = 1000") 
+TEST_CASE("selestion_sort_1000", "size = 1000") 
 {
 	srand(time(NULL));
 	const int size = 1000;
@@ -105,11 +105,11 @@ TEST_CASE("selestion_sort", "size = 1000")
   
 	selection_sort(&arr[0], &arr[size]);
   
-  std::vector<int> v(arr, arr + size);
-  std::sort(v.begin(), v.end());
+	std::vector<int> v(arr, arr + size);
+	std::sort(v.begin(), v.end());
   
-  for (int i = 0; i < size; i++) 
-  {
-        REQUIRE(arr[i] == v[i]);
-  }
+	for (int i = 0; i < size; i++) 
+	{
+		REQUIRE(arr[i] == v[i]);
+	}
 }
