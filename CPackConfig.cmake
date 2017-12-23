@@ -1,0 +1,22 @@
+include(InstallRequiredSystemLibraries)
+set(CPACK_PACKAGE_CONTACT xyanagrishkovax@gmail.com)
+set(CPACK_PACKAGE_VERSION_MAJOR ${sorting_algorithms_project_VERSION_MAJOR})
+set(CPACK_PACKAGE_VERSION_MINOR ${sorting_algorithms_project_VERSION_MINOR})
+set(CPACK_PACKAGE_VERSION_PATCH ${sorting_algorithms_project_VERSION_PATCH})
+set(CPACK_PACKAGE_VERSION_TWEAK ${sorting_algorithms_project_VERSION_TWEAK})
+set(CPACK_PACKAGE_VERSION ${SPLAYTREE_VERSION})
+set(CPACK_PACKAGE_DESCRIPTION_FILE ${CMAKE_CURRENT_SOURCE_DIR}/DESCRIPTION)
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "sorting algorithms library")
+
+set(CPACK_RESOURCE_FILE_README ${CMAKE_CURRENT_SOURCE_DIR}/README.md)
+set(CPACK_RPM_PACKAGE_NAME "-devel")
+
+set(CPACK_RPM_PACKAGE_GROUP "SplayTree")
+set(CPACK_RPM_PACKAGE_URL "https://github.com/yanaxgrishkova/sorting_algorithms_project")
+set(CPACK_RPM_CHANGELOG_FILE ${CMAKE_CURRENT_SOURCE_DIR}/ChangeLog.md)
+set(CPACK_RPM_PACKAGE_RELEASE 1)
+set(CPACK_DEBIAN_PACKAGE_NAME "libsorting_algorithms_project-dev")
+
+set(CPACK_DEBIAN_PACKAGE_PREDEPENDS "cmake >= 3.0")
+set(CPACK_DEBIAN_PACKAGE_RELEASE 1)
+include(CPack)
