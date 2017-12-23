@@ -11,7 +11,7 @@ TEST_CASE("bubble_sort", "")
  for (int i = 0; i<N; i++)
  {
  nosort[i] = rand () % 1000;
- 
+ }
  
  bubble_sort(&nosort[0], &nosort[N]);
 
