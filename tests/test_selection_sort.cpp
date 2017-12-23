@@ -15,11 +15,11 @@ TEST_CASE("selestion_sort", "")
   
 	selection_sort(&arr[0], &arr[size]);
   
-  std::vector<int> v(array, array + ARRAY_LEN);
+  std::vector<int> v(arr, arr + size);
   std::sort(v.begin(), v.end());
   
-  for (int i = 0; i < ARRAY_LEN; i++) 
+  for (int i = 0; i < size; i++) 
   {
-        REQUIRE(array[i] == v[i]);
+        REQUIRE(arr[i] == v[i]);
   }
 }
