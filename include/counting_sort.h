@@ -3,14 +3,16 @@
 #include <algorithm>
 #include <vector>
 
-template<typename Iterator> 
+template <typename Iterator> 
 void counting_sort(Iterator first, Iterator last) 
 {
 	auto min_max = std::minmax_element(first, last);
+	
 	if (min_max.first == min_max.second) 
 	{ 
 		return;
 	}
+	
 	auto min = *min_max.first;
 	auto max = *min_max.second;
 	std::vector<int> c((max - min) + 1, 0);
