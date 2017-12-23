@@ -219,7 +219,7 @@ TEST_CASE("selestion_sort_2_10")
   
 	for (int i = 0; i < size; i++)
   	{
-		arr[i] = rand() % 3;
+		arr[i] = 1 + rand() % 4;
   	}
   
 	selection_sort(&arr[0], &arr[size]);
@@ -241,7 +241,7 @@ TEST_CASE("selestion_sort_2_100")
   
 	for (int i = 0; i < size; i++)
   	{
-		arr[i] = rand() % 3;
+		arr[i] = 1 + rand() % 4;
   	}
   
 	selection_sort(&arr[0], &arr[size]);
@@ -264,7 +264,7 @@ TEST_CASE("selestion_sort_2_1000")
   
 	for (int i = 0; i < size; i++)
   	{
-		arr[i] = rand() % 3;
+		arr[i] = 1 + rand() % 4;
   	}
   
 	selection_sort(&arr[0], &arr[size]);
