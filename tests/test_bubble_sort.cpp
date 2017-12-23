@@ -9,8 +9,10 @@ TEST_CASE("N=10, int", "")
  
  int nosort[N];
  for (int i = 0; i<N; i++)
+ {
  nosort[i] = rand () % 1000;
- 
+ }
+
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
