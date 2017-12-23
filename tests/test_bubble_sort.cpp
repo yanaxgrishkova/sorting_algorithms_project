@@ -24,7 +24,7 @@ std::sort(sorted.begin(), sorted.end());
 }
 
 
-TEST_CASE("bubble_sort", "N=10") 
+TEST_CASE("bubble_sort2", "N=10") 
 {
  srand(time(NULL));
  const int N = 10;
@@ -47,7 +47,7 @@ std::sort(sorted.begin(), sorted.end());
 }
 
 
-TEST_CASE("bubble_sort", "N = 100") 
+TEST_CASE("bubble_sort3", "N = 100") 
 {
  srand(time(NULL));
  const int N = 100;
@@ -70,7 +70,7 @@ std::sort(sorted.begin(), sorted.end());
 }
 
 
-TEST_CASE("bubble_sort", "N=500") 
+TEST_CASE("bubble_sort4", "N=500") 
 {
  srand(time(NULL));
  const int N = 500;
@@ -93,7 +93,7 @@ std::sort(sorted.begin(), sorted.end());
 }
 
 
-TEST_CASE("bubble_sort", "N=1000") 
+TEST_CASE("bubble_sort5", "N=1000") 
 {
  srand(time(NULL));
  const int N = 1000;
