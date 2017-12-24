@@ -2,7 +2,7 @@
 #include <ctime>
 #include "counting_sort.h"
 
-TEST_CASE("bubble_sort", "N=1") 
+TEST_CASE("counting_sort", "N=1") 
 {
  srand(time(NULL));
  const int N = 1;
@@ -23,7 +23,7 @@ std::sort(sorted.begin(), sorted.end());
 }
 
 
-TEST_CASE("bubble_sort2", "N=10") 
+TEST_CASE("counting_sort2", "N=10") 
 {
  srand(time(NULL));
  const int N = 10;
@@ -46,7 +46,7 @@ std::sort(sorted.begin(), sorted.end());
 }
 
 
-TEST_CASE("bubble_sort3", "N = 100") 
+TEST_CASE("counting_sort3", "N = 100") 
 {
  srand(time(NULL));
  const int N = 100;
