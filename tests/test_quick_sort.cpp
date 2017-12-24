@@ -6,7 +6,7 @@
 
 //////////////////////////////////// Сортировка рандомных массивов длины 1, 10, 100, 500 и 1000 ////////////////////////////////////
 
-TEST_CASE("selestion_sort") 
+TEST_CASE("quick_sort") 
 {
 	srand(time(NULL));
 	const int size = 10;
@@ -17,7 +17,7 @@ TEST_CASE("selestion_sort")
 		arr[i] = rand() % 1000;
   	}
   
-	selection_sort(&arr[0], &arr[size]);
+	quick_sort(&arr[0], &arr[size]);
 	
 	std::cout << "runtime = " << clock() / 1000.0 << std::endl;
   
