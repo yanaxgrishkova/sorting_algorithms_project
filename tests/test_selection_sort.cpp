@@ -1,4 +1,4 @@
-/*#include <catch.hpp>
+/* #include <catch.hpp>
 #include <ctime> 
 #include <utility>
 
@@ -276,4 +276,4 @@ TEST_CASE("selestion_sort_2_1000")
 	{
 		REQUIRE(arr[i] == v[i]);
 	}
-}
+} */
