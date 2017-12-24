@@ -1,4 +1,4 @@
-/*#include <catch.hpp>
+/* #include <catch.hpp>
 
 #include "counting_sort.h"
 
@@ -323,4 +323,4 @@ std::sort(sorted.begin(), sorted.end());
   {
         REQUIRE(nosort[i] == sorted[i]);
   }
-}
+}*/
