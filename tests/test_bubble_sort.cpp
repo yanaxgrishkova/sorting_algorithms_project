@@ -18,11 +18,8 @@ TEST_CASE("bubble_sort", "N=1")
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
-}
+ REQUIRE(nosort[N] == sorted[N]);
+ }
 
 
 TEST_CASE("bubble_sort2", "N=10") 
