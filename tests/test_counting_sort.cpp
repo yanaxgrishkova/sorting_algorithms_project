@@ -120,27 +120,6 @@ std::sort(sorted.begin(), sorted.end());
 //////////////////////////////////// Сортировка обратных массивов длины 10, 100, 500 и 1000 ////////////////////////////////////
 
 
-TEST_CASE("counting_sort_swap", "") 
-{
- srand(time(NULL));
- const int N = 1;
- 
- int nosort[N];
- for (int i = 0; i<N; i++)
- nosort[i] = N-i;
- 
- 
-counting_sort(&nosort[0], &nosort[N]);
-
-std::vector<int> sorted(nosort, nosort + N);
-std::sort(sorted.begin(), sorted.end());
-  
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
-}
-
 TEST_CASE("counting_sort_swap_1", "N=10") 
 {
  srand(time(NULL));
