@@ -1,4 +1,4 @@
-/* #include <catch.hpp>
+#include <catch.hpp>
 
 #include "counting_sort.h"
 
@@ -18,10 +18,13 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
+}
+  REQUIRE(flag == true);
 }
 
 
@@ -41,10 +44,13 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
+}
+  REQUIRE(flag == true);
 }
 
 
@@ -64,12 +70,14 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
 }
-
+  REQUIRE(flag == true);
+}
 
 TEST_CASE("counting_sort4", "N=500") 
 {
@@ -87,10 +95,13 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
+}
+  REQUIRE(flag == true);
 }
 
 
@@ -110,10 +121,13 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
+}
+  REQUIRE(flag == true);
 }
 
 
@@ -136,10 +150,13 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
+}
+  REQUIRE(flag == true);
 }
 
 TEST_CASE("counting_sort_swap_2", "N=100") 
@@ -158,10 +175,13 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
+}
+  REQUIRE(flag == true);
 }
 
 TEST_CASE("counting_sort_swap_3", "N=500") 
@@ -180,10 +200,13 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
+}
+  REQUIRE(flag == true);
 }
 
 TEST_CASE("counting_sort_swap_4", "N=1000") 
@@ -202,10 +225,13 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
+}
+  REQUIRE(flag == true);
 }
 
 
@@ -228,10 +254,13 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
+}
+  REQUIRE(flag == true);
 }
 
 TEST_CASE("counting_sort_fewunique_1", "N=10") 
@@ -250,10 +279,13 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
+}
+  REQUIRE(flag == true);
 }
 
 
@@ -273,10 +305,13 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
+}
+  REQUIRE(flag == true);
 }
 
 
@@ -296,10 +331,13 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
+}
+  REQUIRE(flag == true);
 }
 
 
@@ -319,8 +357,11 @@ counting_sort(&nosort[0], &nosort[N]);
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
-  for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
-  }
-}*/
+bool flag = true; 
+for (int i = 0; i < N; i++) 
+{ 
+ if (nosort[i] != sorted[i]) 
+ flag = false; 
+}
+  REQUIRE(flag == true);
+}
