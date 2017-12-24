@@ -1,6 +1,8 @@
 #include <catch.hpp>
-#include <ctime>
+
 #include "counting_sort.h"
+
+//////////////////////////////////// Сортировка рандомных массивов длины 1, 10, 100, 500 и 1000 ////////////////////////////////////
 
 TEST_CASE("counting_sort", "N=1") 
 {
@@ -69,7 +71,7 @@ std::sort(sorted.begin(), sorted.end());
 }
 
 
-TEST_CASE("bubble_sort4", "N=500") 
+TEST_CASE("counting_sort4", "N=500") 
 {
  srand(time(NULL));
  const int N = 500;
@@ -92,7 +94,7 @@ std::sort(sorted.begin(), sorted.end());
 }
 
 
-TEST_CASE("bubble_sort5", "N=1000") 
+TEST_CASE("counting_sort5", "N=1000") 
 {
  srand(time(NULL));
  const int N = 1000;
@@ -114,7 +116,11 @@ std::sort(sorted.begin(), sorted.end());
   }
 }
 
-TEST_CASE("bubble_sort_swap", "") 
+
+//////////////////////////////////// Сортировка обратных массивов длины 10, 100, 500 и 1000 ////////////////////////////////////
+
+
+TEST_CASE("counting_sort_swap", "") 
 {
  srand(time(NULL));
  const int N = 1;
@@ -135,7 +141,7 @@ std::sort(sorted.begin(), sorted.end());
   }
 }
 
-TEST_CASE("bubble_sort_swap_1", "N=10") 
+TEST_CASE("counting_sort_swap_1", "N=10") 
 {
  srand(time(NULL));
  const int N = 10;
@@ -157,7 +163,7 @@ std::sort(sorted.begin(), sorted.end());
   }
 }
 
-TEST_CASE("bubble_sort_swap_2", "N=100") 
+TEST_CASE("counting_sort_swap_2", "N=100") 
 {
  srand(time(NULL));
  const int N = 100;
@@ -179,7 +185,7 @@ std::sort(sorted.begin(), sorted.end());
   }
 }
 
-TEST_CASE("bubble_sort_swap_3", "N=500") 
+TEST_CASE("counting_sort_swap_3", "N=500") 
 {
  srand(time(NULL));
  const int N = 500;
@@ -201,7 +207,7 @@ std::sort(sorted.begin(), sorted.end());
   }
 }
 
-TEST_CASE("bubble_sort_swap_4", "N=1000") 
+TEST_CASE("counting_sort_swap_4", "N=1000") 
 {
  srand(time(NULL));
  const int N = 1000;
@@ -223,7 +229,11 @@ std::sort(sorted.begin(), sorted.end());
   }
 }
 
-TEST_CASE("bubble_sort_fewunique", "N=1") 
+
+//////////////////////////////////// Сортировка массивов, заполненных значениями в промежутке [0; 3] ////////////////////////////////////
+
+
+TEST_CASE("counting_sort_fewunique", "N=1") 
 {
  srand(time(NULL));
  const int N = 1;
@@ -245,7 +255,7 @@ std::sort(sorted.begin(), sorted.end());
   }
 }
 
-TEST_CASE("bubble_sort_fewunique_1", "N=10") 
+TEST_CASE("counting_sort_fewunique_1", "N=10") 
 {
  srand(time(NULL));
  const int N = 10;
@@ -268,7 +278,7 @@ std::sort(sorted.begin(), sorted.end());
 }
 
 
-TEST_CASE("bubble_sort_fewunique_2", "N=100") 
+TEST_CASE("counting_sort_fewunique_2", "N=100") 
 {
  srand(time(NULL));
  const int N = 100;
@@ -291,7 +301,7 @@ std::sort(sorted.begin(), sorted.end());
 }
 
 
-TEST_CASE("bubble_sort_fewunique_3", "N=500") 
+TEST_CASE("counting_sort_fewunique_3", "N=500") 
 {
  srand(time(NULL));
  const int N = 500;
@@ -314,7 +324,7 @@ std::sort(sorted.begin(), sorted.end());
 }
 
 
-TEST_CASE("bubble_sort_fewunique_4", "N=1000") 
+TEST_CASE("counting_sort_fewunique_4", "N=1000") 
 {
  srand(time(NULL));
  const int N = 1000;
