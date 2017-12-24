@@ -1,4 +1,4 @@
-/*#include <catch.hpp>
+/* #include <catch.hpp>
 #include "insertion_sort.h"
 #include <ctime>
 //////////////////////////////////// Сортировка рандомных массивов длины 1, 10, 100, 500 и 1000 ////////////////////////////////////
@@ -322,4 +322,4 @@ TEST_CASE("insertion_sort_fewunique_4", "N=1000")
 	{
 		REQUIRE(nosort[i] == sorted[i]);
 	}
-}
+} */
