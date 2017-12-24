@@ -19,11 +19,10 @@ std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
 bool flag = true; 
-  for (int i = 0; i < N; i++) 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
  
 }
@@ -45,12 +44,11 @@ TEST_CASE("bubble_sort2", "N=10")
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
- bool flag = true; 
-  for (int i = 0; i < N; i++) 
+bool flag = true; 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
  
 }
@@ -73,11 +71,10 @@ std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
 bool flag = true; 
-  for (int i = 0; i < N; i++) 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
  
 }
@@ -100,11 +97,10 @@ std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
 bool flag = true; 
-  for (int i = 0; i < N; i++) 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
  
 }
@@ -127,11 +123,10 @@ std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
 bool flag = true; 
-  for (int i = 0; i < N; i++) 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
  
 }
@@ -154,11 +149,10 @@ std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
 bool flag = true; 
-  for (int i = 0; i < N; i++) 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
  
 }
@@ -180,11 +174,10 @@ std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
 bool flag = true; 
-  for (int i = 0; i < N; i++) 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
  
 }
@@ -206,11 +199,10 @@ std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
 bool flag = true; 
-  for (int i = 0; i < N; i++) 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
  
 }
@@ -232,13 +224,11 @@ std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
 bool flag = true; 
-  for (int i = 0; i < N; i++) 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
- 
 }
 
 TEST_CASE("bubble_sort_swap_4", "N=1000") 
@@ -258,11 +248,10 @@ std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
 bool flag = true; 
-  for (int i = 0; i < N; i++) 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
  
 }
@@ -284,13 +273,12 @@ TEST_CASE("bubble_sort_fewunique", "N=1")
 
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
-  
+
  bool flag = true; 
-  for (int i = 0; i < N; i++) 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
  
 }
@@ -311,12 +299,11 @@ TEST_CASE("bubble_sort_fewunique_1", "N=10")
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
- bool flag = true; 
-  for (int i = 0; i < N; i++) 
+bool flag = true; 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
  
 }
@@ -339,15 +326,10 @@ std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
 bool flag = true; 
-  for (int i = 0; i < N; i++) 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
-  }
-   for (int i = 0; i < N; i++) 
-  {
-        REQUIRE(nosort[i] == sorted[i]);
   }
 }
 
@@ -368,14 +350,12 @@ TEST_CASE("bubble_sort_fewunique_3", "N=500")
 std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
- bool flag = true; 
-  for (int i = 0; i < N; i++) 
+bool flag = true; 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
- 
 }
 
 
@@ -396,11 +376,9 @@ std::vector<int> sorted(nosort, nosort + N);
 std::sort(sorted.begin(), sorted.end());
   
 bool flag = true; 
-  for (int i = 0; i < N; i++) 
+  for (int i = 0; i < N, flag==true; i++) 
   {
    if (nosort[i] != sorted[i])
     flag = false;
-        REQUIRE(flag == true);
   }
- 
 }
