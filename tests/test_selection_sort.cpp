@@ -1,279 +1,364 @@
-/* #include <catch.hpp>
-#include <ctime> 
-#include <utility>
-
-#include "selection_sort.h"
-
+#include <catch.hpp>
+#include "selestion_sort.h"
+#include <ctime>
 //////////////////////////////////// Сортировка рандомных массивов длины 1, 10, 100, 500 и 1000 ////////////////////////////////////
 
-TEST_CASE("selestion_sort") 
+TEST_CASE("selestion_sort", "N=1")
 {
 	srand(time(NULL));
-	const int size = 1;
-	int arr[size];
-  
-	for (int i = 0; i < size; i++)
-  	{
-		arr[i] = rand() % 1000;
-  	}
-  
-	selection_sort(&arr[0], &arr[size]);
-	
-	std::cout << "runtime = " << clock() / 1000.0 << std::endl;
-  
-	std::vector<int> v(arr, arr + size);
-	std::sort(v.begin(), v.end());
-  
-	for (int i = 0; i < size; i++) 
+	const int N = 1;
+
+	int nosort[N];
+	for (int i = 0; i<N; i++)
+		nosort[i] = rand() % 1000;
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+
+	bool flag = true;
+	for (int i = 0; i < N; i++)
 	{
-		REQUIRE(arr[i] == v[i]);
+		if (nosort[i] != sorted[i])
+			flag = false;
 	}
+	REQUIRE(flag == true);
 }
 
-TEST_CASE("selestion_sort_10") 
+
+TEST_CASE("selestion_sort2", "N=10")
 {
 	srand(time(NULL));
-	const int size = 10;
-	int arr[size];
-  
-	for (int i = 0; i < size; i++)
-  	{
-		arr[i] = rand() % 1000;
-  	}
-  
-	selection_sort(&arr[0], &arr[size]);
-  
-	std::vector<int> v(arr, arr + size);
-	std::sort(v.begin(), v.end());
-  
-	for (int i = 0; i < size; i++) 
+	const int N = 10;
+
+	int nosort[N];
+	for (int i = 0; i<N; i++)
 	{
-		REQUIRE(arr[i] == v[i]);
+		nosort[i] = rand() % 1000;
 	}
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+
+	bool flag = true;
+	for (int i = 0; i < N; i++)
+	{
+		if (nosort[i] != sorted[i])
+			flag = false;
+	}
+	REQUIRE(flag == true);
 }
 
-TEST_CASE("selestion_sort_100") 
+
+TEST_CASE("selestion_sort3", "N = 100")
 {
 	srand(time(NULL));
-	const int size = 100;
-	int arr[size];
-  
-	for (int i = 0; i < size; i++)
-  	{
-		arr[i] = rand() % 1000;
-  	}
-  
-	selection_sort(&arr[0], &arr[size]);
-  
-	std::vector<int> v(arr, arr + size);
-	std::sort(v.begin(), v.end());
-  
-	for (int i = 0; i < size; i++) 
+	const int N = 100;
+
+	int nosort[N];
+	for (int i = 0; i<N; i++)
 	{
-		REQUIRE(arr[i] == v[i]);
+		nosort[i] = rand() % 1000;
 	}
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+
+	bool flag = true;
+	for (int i = 0; i < N; i++)
+	{
+		if (nosort[i] != sorted[i])
+			flag = false;
+	}
+	REQUIRE(flag == true);
 }
 
-TEST_CASE("selestion_sort_500") 
+
+TEST_CASE("selestion_sort4", "N=500")
 {
 	srand(time(NULL));
-	const int size = 500;
-	int arr[size];
-  
-	for (int i = 0; i < size; i++)
-  	{
-		arr[i] = rand() % 1000;
-  	}
-  
-	selection_sort(&arr[0], &arr[size]);
-  
-	std::vector<int> v(arr, arr + size);
-	std::sort(v.begin(), v.end());
-  
-	for (int i = 0; i < size; i++) 
+	const int N = 500;
+
+	int nosort[N];
+	for (int i = 0; i<N; i++)
 	{
-		REQUIRE(arr[i] == v[i]);
+		nosort[i] = rand() % 1000;
 	}
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+
+	bool flag = true;
+	for (int i = 0; i < N; i++)
+	{
+		if (nosort[i] != sorted[i])
+			flag = false;
+	}
+	REQUIRE(flag == true);
 }
 
-TEST_CASE("selestion_sort_1000") 
+
+TEST_CASE("selestion_sort5", "N=1000")
 {
 	srand(time(NULL));
-	const int size = 1000;
-	int arr[size];
-  
-	for (int i = 0; i < size; i++)
-  	{
-		arr[i] = rand() % 1000;
-  	}
-  
-	selection_sort(&arr[0], &arr[size]);
-  
-	std::vector<int> v(arr, arr + size);
-	std::sort(v.begin(), v.end());
-  
-	for (int i = 0; i < size; i++) 
+	const int N = 1000;
+
+	int nosort[N];
+	for (int i = 0; i<N; i++)
 	{
-		REQUIRE(arr[i] == v[i]);
+		nosort[i] = rand() % 1000;
 	}
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+	bool flag = true;
+	for (int i = 0; i < N; i++)
+	{
+		if (nosort[i] != sorted[i])
+			flag = false;
+	}
+	REQUIRE(flag == true);
 }
+
 
 //////////////////////////////////// Сортировка обратных массивов длины 10, 100, 500 и 1000 ////////////////////////////////////
 
-TEST_CASE("selestion_sort_1_10") 
+
+TEST_CASE("selestion_sort_swap_1", "N=10")
 {
 	srand(time(NULL));
-	const int size = 10;
-	int arr[size];
-  
-	for (int i = 0; i < size; i++)
-  	{
-		arr[i] = size - i;
-  	}
-  
-	selection_sort(&arr[0], &arr[size]);
-  
-	std::vector<int> v(arr, arr + size);
-	std::sort(v.begin(), v.end());
-  
-	for (int i = 0; i < size; i++) 
+	const int N = 10;
+
+	int nosort[N];
+	for (int i = 0; i<N; i++)
 	{
-		REQUIRE(arr[i] == v[i]);
+		nosort[i] = N - i;
 	}
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+
+	bool flag = true;
+	for (int i = 0; i < N; i++)
+	{
+		if (nosort[i] != sorted[i])
+			flag = false;
+	}
+	REQUIRE(flag == true);
 }
 
-TEST_CASE("selestion_sort_1_100") 
+TEST_CASE("selestion_sort_swap_2", "N=100")
 {
 	srand(time(NULL));
-	const int size = 100;
-	int arr[size];
-  
-	for (int i = 0; i < size; i++)
-  	{
-		arr[i] = size - i;
-  	}
-  
-	selection_sort(&arr[0], &arr[size]);
-  
-	std::vector<int> v(arr, arr + size);
-	std::sort(v.begin(), v.end());
-  
-	for (int i = 0; i < size; i++) 
+	const int N = 100;
+
+	int nosort[N];
+	for (int i = 0; i<N; i++)
 	{
-		REQUIRE(arr[i] == v[i]);
+		nosort[i] = N - i;
 	}
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+
+	bool flag = true;
+	for (int i = 0; i < N; i++)
+	{
+		if (nosort[i] != sorted[i])
+			flag = false;
+	}
+	REQUIRE(flag == true);
 }
 
-TEST_CASE("selestion_sort_1_500") 
+TEST_CASE("selestion_sort_swap_3", "N=500")
 {
 	srand(time(NULL));
-	const int size = 500;
-	int arr[size];
-  
-	for (int i = 0; i < size; i++)
-  	{
-		arr[i] = size - i;
-  	}
-  
-	selection_sort(&arr[0], &arr[size]);
-  
-	std::vector<int> v(arr, arr + size);
-	std::sort(v.begin(), v.end());
-  
-	for (int i = 0; i < size; i++) 
+	const int N = 500;
+
+	int nosort[N];
+	for (int i = 0; i<N; i++)
 	{
-		REQUIRE(arr[i] == v[i]);
+		nosort[i] = N - i;
 	}
-}
-	  
-TEST_CASE("selestion_sort_1_1000") 
-{
-	srand(time(NULL));
-	const int size = 1000;
-	int arr[size];
-  
-	for (int i = 0; i < size; i++)
-  	{
-		arr[i] = size - i;
-  	}
-  
-	selection_sort(&arr[0], &arr[size]);
-  
-	std::vector<int> v(arr, arr + size);
-	std::sort(v.begin(), v.end());
-  
-	for (int i = 0; i < size; i++) 
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+
+	bool flag = true;
+	for (int i = 0; i < N; i++)
 	{
-		REQUIRE(arr[i] == v[i]);
+		if (nosort[i] != sorted[i])
+			flag = false;
 	}
+	REQUIRE(flag == true);
 }
 
-
-//////////////////////////////////// Сортировка обратных массивов, заполненных значениями в промежутке [0; 3] ////////////////////////////////////
-
-TEST_CASE("selestion_sort_2_10") 
+TEST_CASE("selestion_sort_swap_4", "N=1000")
 {
 	srand(time(NULL));
-	const int size = 10;
-	int arr[size];
-  
-	for (int i = 0; i < size; i++)
-  	{
-		arr[i] = 1 + rand() % 4;
-  	}
-  
-	selection_sort(&arr[0], &arr[size]);
-  
-	std::vector<int> v(arr, arr + size);
-	std::sort(v.begin(), v.end());
-  
-	for (int i = 0; i < size; i++) 
-	{
-		REQUIRE(arr[i] == v[i]);
-	}
-}
+	const int N = 1000;
 
-TEST_CASE("selestion_sort_2_100") 
-{
-	srand(time(NULL));
-	const int size = 100;
-	int arr[size];
-  
-	for (int i = 0; i < size; i++)
-  	{
-		arr[i] = 1 + rand() % 4;
-  	}
-  
-	selection_sort(&arr[0], &arr[size]);
-  
-	std::vector<int> v(arr, arr + size);
-	std::sort(v.begin(), v.end());
-  
-	for (int i = 0; i < size; i++) 
+	int nosort[N];
+	for (int i = 0; i<N; i++)
 	{
-		REQUIRE(arr[i] == v[i]);
+		nosort[i] = N - i;
 	}
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+
+	bool flag = true;
+	for (int i = 0; i < N; i++)
+	{
+		if (nosort[i] != sorted[i])
+			flag = false;
+	}
+	REQUIRE(flag == true);
 }
 
 
-TEST_CASE("selestion_sort_2_1000") 
+//////////////////////////////////// Сортировка массивов, заполненных значениями в промежутке [0; 3] ////////////////////////////////////
+
+
+TEST_CASE("selestion_sort_fewunique", "N=1")
 {
 	srand(time(NULL));
-	const int size = 1000;
-	int arr[size];
-  
-	for (int i = 0; i < size; i++)
-  	{
-		arr[i] = 1 + rand() % 4;
-  	}
-  
-	selection_sort(&arr[0], &arr[size]);
-  
-	std::vector<int> v(arr, arr + size);
-	std::sort(v.begin(), v.end());
-  
-	for (int i = 0; i < size; i++) 
+	const int N = 1;
+
+	int nosort[N];
+	for (int i = 0; i<N; i++)
 	{
-		REQUIRE(arr[i] == v[i]);
+		nosort[i] = rand() % 3;
 	}
-} */
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+
+	bool flag = true;
+	for (int i = 0; i < N; i++)
+	{
+		if (nosort[i] != sorted[i])
+			flag = false;
+	}
+	REQUIRE(flag == true);
+}
+
+TEST_CASE("selestion_sort_fewunique_1", "N=10")
+{
+	srand(time(NULL));
+	const int N = 10;
+
+	int nosort[N];
+	for (int i = 0; i<N; i++)
+	{
+		nosort[i] = rand() % 3;
+	}
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+
+	bool flag = true;
+	for (int i = 0; i < N; i++)
+	{
+		if (nosort[i] != sorted[i])
+			flag = false;
+	}
+	REQUIRE(flag == true);
+}
+
+
+TEST_CASE("selestion_sort_fewunique_2", "N=100")
+{
+	srand(time(NULL));
+	const int N = 100;
+
+	int nosort[N];
+	for (int i = 0; i<N; i++)
+	{
+		nosort[i] = rand() % 3;
+	}
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+
+	bool flag = true;
+	for (int i = 0; i < N; i++)
+	{
+		if (nosort[i] != sorted[i])
+			flag = false;
+	}
+	REQUIRE(flag == true);
+}
+
+TEST_CASE("selestion_sort_fewunique_3", "N=500")
+{
+	srand(time(NULL));
+	const int N = 500;
+
+	int nosort[N];
+	for (int i = 0; i<N; i++)
+	{
+		nosort[i] = rand() % 3;
+	}
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+
+	bool flag = true;
+	for (int i = 0; i < N; i++)
+	{
+		if (nosort[i] != sorted[i])
+			flag = false;
+	}
+	REQUIRE(flag == true);
+}
+
+TEST_CASE("selestion_sort_fewunique_4", "N=1000")
+{
+	srand(time(NULL));
+	const int N = 1000;
+
+	int nosort[N];
+	for (int i = 0; i<N; i++)
+	{
+		nosort[i] = rand() % 3;
+	}
+
+	selestion_sort(&nosort[0], &nosort[N]);
+
+	std::vector<int> sorted(nosort, nosort + N);
+	std::sort(sorted.begin(), sorted.end());
+
+	bool flag = true;
+	for (int i = 0; i < N; i++)
+	{
+		if (nosort[i] != sorted[i])
+			flag = false;
+	}
+	REQUIRE(flag == true);
+}
