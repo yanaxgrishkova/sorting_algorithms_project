@@ -1,9 +1,9 @@
 #include <catch.hpp>
-#include "selestion_sort.h"
+#include "selection_sort.h"
 #include <ctime>
 //////////////////////////////////// Сортировка рандомных массивов длины 1, 10, 100, 500 и 1000 ////////////////////////////////////
 
-TEST_CASE("selestion_sort", "N=1")
+TEST_CASE("selection_sort", "N=1")
 {
 	srand(time(NULL));
 	const int N = 1;
@@ -12,7 +12,7 @@ TEST_CASE("selestion_sort", "N=1")
 	for (int i = 0; i<N; i++)
 		nosort[i] = rand() % 1000;
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
@@ -27,7 +27,7 @@ TEST_CASE("selestion_sort", "N=1")
 }
 
 
-TEST_CASE("selestion_sort2", "N=10")
+TEST_CASE("selection_sort2", "N=10")
 {
 	srand(time(NULL));
 	const int N = 10;
@@ -38,7 +38,7 @@ TEST_CASE("selestion_sort2", "N=10")
 		nosort[i] = rand() % 1000;
 	}
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
@@ -53,7 +53,7 @@ TEST_CASE("selestion_sort2", "N=10")
 }
 
 
-TEST_CASE("selestion_sort3", "N = 100")
+TEST_CASE("selection_sort3", "N = 100")
 {
 	srand(time(NULL));
 	const int N = 100;
@@ -64,7 +64,7 @@ TEST_CASE("selestion_sort3", "N = 100")
 		nosort[i] = rand() % 1000;
 	}
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
@@ -79,7 +79,7 @@ TEST_CASE("selestion_sort3", "N = 100")
 }
 
 
-TEST_CASE("selestion_sort4", "N=500")
+TEST_CASE("selection_sort4", "N=500")
 {
 	srand(time(NULL));
 	const int N = 500;
@@ -90,7 +90,7 @@ TEST_CASE("selestion_sort4", "N=500")
 		nosort[i] = rand() % 1000;
 	}
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
@@ -105,7 +105,7 @@ TEST_CASE("selestion_sort4", "N=500")
 }
 
 
-TEST_CASE("selestion_sort5", "N=1000")
+TEST_CASE("selection_sort5", "N=1000")
 {
 	srand(time(NULL));
 	const int N = 1000;
@@ -116,7 +116,7 @@ TEST_CASE("selestion_sort5", "N=1000")
 		nosort[i] = rand() % 1000;
 	}
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
@@ -133,7 +133,7 @@ TEST_CASE("selestion_sort5", "N=1000")
 //////////////////////////////////// Сортировка обратных массивов длины 10, 100, 500 и 1000 ////////////////////////////////////
 
 
-TEST_CASE("selestion_sort_swap_1", "N=10")
+TEST_CASE("selection_sort_swap_1", "N=10")
 {
 	srand(time(NULL));
 	const int N = 10;
@@ -144,7 +144,7 @@ TEST_CASE("selestion_sort_swap_1", "N=10")
 		nosort[i] = N - i;
 	}
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
@@ -158,7 +158,7 @@ TEST_CASE("selestion_sort_swap_1", "N=10")
 	REQUIRE(flag == true);
 }
 
-TEST_CASE("selestion_sort_swap_2", "N=100")
+TEST_CASE("selection_sort_swap_2", "N=100")
 {
 	srand(time(NULL));
 	const int N = 100;
@@ -169,7 +169,7 @@ TEST_CASE("selestion_sort_swap_2", "N=100")
 		nosort[i] = N - i;
 	}
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
@@ -183,7 +183,7 @@ TEST_CASE("selestion_sort_swap_2", "N=100")
 	REQUIRE(flag == true);
 }
 
-TEST_CASE("selestion_sort_swap_3", "N=500")
+TEST_CASE("selection_sort_swap_3", "N=500")
 {
 	srand(time(NULL));
 	const int N = 500;
@@ -194,7 +194,7 @@ TEST_CASE("selestion_sort_swap_3", "N=500")
 		nosort[i] = N - i;
 	}
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
@@ -208,7 +208,7 @@ TEST_CASE("selestion_sort_swap_3", "N=500")
 	REQUIRE(flag == true);
 }
 
-TEST_CASE("selestion_sort_swap_4", "N=1000")
+TEST_CASE("selection_sort_swap_4", "N=1000")
 {
 	srand(time(NULL));
 	const int N = 1000;
@@ -219,7 +219,7 @@ TEST_CASE("selestion_sort_swap_4", "N=1000")
 		nosort[i] = N - i;
 	}
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
@@ -237,7 +237,7 @@ TEST_CASE("selestion_sort_swap_4", "N=1000")
 //////////////////////////////////// Сортировка массивов, заполненных значениями в промежутке [0; 3] ////////////////////////////////////
 
 
-TEST_CASE("selestion_sort_fewunique", "N=1")
+TEST_CASE("selection_sort_fewunique", "N=1")
 {
 	srand(time(NULL));
 	const int N = 1;
@@ -248,7 +248,7 @@ TEST_CASE("selestion_sort_fewunique", "N=1")
 		nosort[i] = rand() % 3;
 	}
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
@@ -262,7 +262,7 @@ TEST_CASE("selestion_sort_fewunique", "N=1")
 	REQUIRE(flag == true);
 }
 
-TEST_CASE("selestion_sort_fewunique_1", "N=10")
+TEST_CASE("selection_sort_fewunique_1", "N=10")
 {
 	srand(time(NULL));
 	const int N = 10;
@@ -273,7 +273,7 @@ TEST_CASE("selestion_sort_fewunique_1", "N=10")
 		nosort[i] = rand() % 3;
 	}
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
@@ -288,7 +288,7 @@ TEST_CASE("selestion_sort_fewunique_1", "N=10")
 }
 
 
-TEST_CASE("selestion_sort_fewunique_2", "N=100")
+TEST_CASE("selection_sort_fewunique_2", "N=100")
 {
 	srand(time(NULL));
 	const int N = 100;
@@ -299,7 +299,7 @@ TEST_CASE("selestion_sort_fewunique_2", "N=100")
 		nosort[i] = rand() % 3;
 	}
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
@@ -313,7 +313,7 @@ TEST_CASE("selestion_sort_fewunique_2", "N=100")
 	REQUIRE(flag == true);
 }
 
-TEST_CASE("selestion_sort_fewunique_3", "N=500")
+TEST_CASE("selection_sort_fewunique_3", "N=500")
 {
 	srand(time(NULL));
 	const int N = 500;
@@ -324,7 +324,7 @@ TEST_CASE("selestion_sort_fewunique_3", "N=500")
 		nosort[i] = rand() % 3;
 	}
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
@@ -338,7 +338,7 @@ TEST_CASE("selestion_sort_fewunique_3", "N=500")
 	REQUIRE(flag == true);
 }
 
-TEST_CASE("selestion_sort_fewunique_4", "N=1000")
+TEST_CASE("selection_sort_fewunique_4", "N=1000")
 {
 	srand(time(NULL));
 	const int N = 1000;
@@ -349,7 +349,7 @@ TEST_CASE("selestion_sort_fewunique_4", "N=1000")
 		nosort[i] = rand() % 3;
 	}
 
-	selestion_sort(&nosort[0], &nosort[N]);
+	selection_sort(&nosort[0], &nosort[N]);
 
 	std::vector<int> sorted(nosort, nosort + N);
 	std::sort(sorted.begin(), sorted.end());
