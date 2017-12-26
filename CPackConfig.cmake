@@ -11,7 +11,7 @@ set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "sorting algorithms library")
 set(CPACK_RESOURCE_FILE_README ${CMAKE_CURRENT_SOURCE_DIR}/README.md)
 set(CPACK_RPM_PACKAGE_NAME "-devel")
 
-set(CPACK_RPM_PACKAGE_GROUP "SplayTree")
+set(CPACK_RPM_PACKAGE_GROUP "sorting_algorithms_project")
 set(CPACK_RPM_PACKAGE_URL "https://github.com/yanaxgrishkova/sorting_algorithms_project")
 set(CPACK_RPM_CHANGELOG_FILE ${CMAKE_CURRENT_SOURCE_DIR}/ChangeLog.md)
 set(CPACK_RPM_PACKAGE_RELEASE 1)
