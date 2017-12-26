@@ -3,9 +3,9 @@
 template <typename BidirectionalIterator>
 void quick_sort(BidirectionalIterator first, BidirectionalIterator last)
 {
-	Iterator pivot = last - 1;
-	Iterator j = last - 1;
-	Iterator i = first;
+	BidirectionalIterator pivot = last - 1;
+	BidirectionalIterator j = last - 1;
+	BidirectionalIterator i = first;
 
 	while (i <= j)
 	{
