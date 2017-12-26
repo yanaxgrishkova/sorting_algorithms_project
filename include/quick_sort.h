@@ -1,7 +1,7 @@
 #include <iostream>
 
-template <typename Iterator>
-void quick_sort(Iterator first, Iterator last)
+template <typename BidirectionalIterator>
+void quick_sort(BidirectionalIterator first, BidirectionalIterator last)
 {
 	Iterator pivot = last - 1;
 	Iterator j = last - 1;
@@ -9,7 +9,6 @@ void quick_sort(Iterator first, Iterator last)
 
 	while (i <= j)
 	{
-
 		while (*i < *pivot)
 		{
 			++i;
