@@ -1,7 +1,7 @@
 #include <algorithm>
 
-template <typename BideractionalIterator>
-void insertion_sort(BideractionalIterator first, BideractionalIterator last)
+template <typename RandomAccessIterator, typename InputIterator>
+void insertion_sort(RandomAccessIterator first, InputIterator last)
 {
 	if (first == last)
 		return;
