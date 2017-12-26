@@ -2,8 +2,8 @@
 #include <ctime> 
 #include <utility>
 
-template <typename  RandomAccessIterator, typename FindMin>
-void merge_sort(RandomAccessIterator first, RandomAccessIterator last, FindMin min, size_t size = 0)
+template <typename  ForwardIterator, typename FindMin>
+void merge_sort(ForwardIterator first, ForwardIterator last, FindMin min, size_t size = 0)
 {
 	if (size == 0 && first != last)
 		size = std::distance(first, last);
@@ -13,23 +13,23 @@ void merge_sort(RandomAccessIterator first, RandomAccessIterator last, FindMin m
 
 	size_t first_half = size / 2;
 	size_t second_half = size - first_half;
-	RandomAccessIterator middle = first;
+	ForwardIterator middle = first;
 	std::advance(middle, first_half);
 
 	merge_sort(first, middle, min, first_half);
 	merge_sort(middle, last, min, second_half);
 
-	RandomAccessIterator right = middle;
+	ForwardIterator right = middle;
 
 	while (first != middle)
 	{
 		if (min(*right, *first))
 		{
-			typename std::iterator_traits<RandomAccessIterator>::value_type replace =
+			typename std::iterator_traits<ForwardIterator>::value_type replace =
 				std::move(*first);
 			*first = std::move(*right);
-			RandomAccessIterator scan = right;
-			RandomAccessIterator next = scan;
+			ForwardIterator scan = right;
+			ForwardIterator next = scan;
 			++next;
 
 			while (next != last && min(*next, replace))
@@ -43,9 +43,9 @@ void merge_sort(RandomAccessIterator first, RandomAccessIterator last, FindMin m
 	}
 }
 
-template <typename RandomAccessIterator>
-void merge_sort(RandomAccessIterator first, RandomAccessIterator last)
+template <typename ForwardIterator>
+void merge_sort(ForwardIterator first, ForwardIterator last)
 {
 	merge_sort(first, last,
-		std::less<typename std::iterator_traits<RandomAccessIterator>::value_type>());
+		std::less<typename std::iterator_traits<ForwardIterator>::value_type>());
 }
