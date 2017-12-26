@@ -11,7 +11,7 @@ set(sorting_algorithms_project_VERSION_MAJOR 0)
 set(sorting_algorithms_project_VERSION_MINOR 1)
 set(sorting_algorithms_project_VERSION_PATCH 0)
 set(sorting_algorithms_project_VERSION_TWEAK 0)
-set(sorting_algorithms_project_VERSION ${sorting_algorithms_project_E_VERSION_MAJOR}.${sorting_algorithms_project_VERSION_MINOR}.${sorting_algorithms_project_VERSION_PATCH}.${sorting_algorithms_project_VERSION_TWEAK})
+set(sorting_algorithms_project_VERSION ${sorting_algorithms_project_MAJOR}.${sorting_algorithms_project_VERSION_MINOR}.${sorting_algorithms_project_VERSION_PATCH}.${sorting_algorithms_project_VERSION_TWEAK})
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -29,7 +29,7 @@ if(BUILD_TESTS)
   find_package(Catch CONFIG REQUIRED)
 
   enable_testing()
-  
+
   file(GLOB ${PROJECT_NAME}_TEST_SOURCES tests/*.cpp)
   add_executable(tests ${${PROJECT_NAME}_TEST_SOURCES})
   target_link_libraries(tests ${PROJECT_NAME} Catch::Catch )
