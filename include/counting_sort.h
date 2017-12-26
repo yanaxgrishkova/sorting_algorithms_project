@@ -1,10 +1,9 @@
-#include <iostream>
 #include <iterator>
 #include <algorithm>
 #include <vector>
 
-template <typename ForwardIterator> 
-void counting_sort(ForwardIterator first, ForwardIterator last) 
+template <typename ForwardIterator, typename InputIterator> 
+void counting_sort(ForwardIterator first, InputIterator last) 
 {
 	auto min_max = std::minmax_element(first, last);
 	
