@@ -3,8 +3,8 @@
 #include <algorithm>
 #include <vector>
 
-template <typename Iterator> 
-void counting_sort(Iterator first, Iterator last) 
+template <typename ForwardIterator> 
+void counting_sort(ForwardIterator first, ForwardIterator last) 
 {
 	auto min_max = std::minmax_element(first, last);
 	
