@@ -1,13 +1,13 @@
 #include <iostream>
 #include <iterator>
 
-template<typename Iterator>
-void selection_sort(Iterator first, Iterator last)
+template<typename ForwardIterator>
+void selection_sort(ForwardIterator first, ForwardIterator last)
 {
-	for (Iterator i = first; i != last; ++i)
+	for (auto i = first; i != last; ++i)
 	{
-		Iterator min = i;
-		for (Iterator it = i + 1; it != last; ++it)
+		ForwardIterator min = i;
+		for (auto it = i + 1; it != last; ++it)
 		{
 			if (*it < *min)
 				std::iter_swap(it, min);
