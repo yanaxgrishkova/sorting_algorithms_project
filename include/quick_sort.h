@@ -1,11 +1,14 @@
-#include <iostream>
+#include <iterator>
 
 template <typename BidirectionalIterator>
 void quick_sort(BidirectionalIterator first, BidirectionalIterator last)
 {
-	BidirectionalIterator pivot = last - 1;
-	BidirectionalIterator j = last - 1;
+	BidirectionalIterator pivot = last;
+	BidirectionalIterator j = last;
 	BidirectionalIterator i = first;
+	
+	std::advance(pivot, -1);
+	std::advance(j, -1);
 
 	while (i <= j)
 	{
