@@ -29,6 +29,16 @@ if(BUILD_TESTS)
   find_package(Catch CONFIG REQUIRED)
 
   enable_testing()
+  
+  if(CMAKE_COMPILER_IS_GNUCXX)
+    include(CodeCoverage)
+    setup_target_for_coverage(${PROJECT_NAME}_coverage tests coverage)
+endif()
+  
+  if(CMAKE_COMPILER_IS_GNUCXX)
+    include(CodeCoverage)
+    setup_target_for_coverage(${PROJECT_NAME}_coverage tests coverage)
+endif()
 
   file(GLOB ${PROJECT_NAME}_TEST_SOURCES tests/*.cpp)
   add_executable(tests ${${PROJECT_NAME}_TEST_SOURCES})
