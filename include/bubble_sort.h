@@ -1,7 +1,7 @@
 #include <iostream>
 
-template <typename Iterator>
-void bubble_sort(Iterator first, Iterator last)
+template <typename ForwardIterator>
+void bubble_sort(ForwardIterator first, ForwardIterator last)
 {
     while (first <-- last)
         for (Iterator i = first; i < last; ++i)
