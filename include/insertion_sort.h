@@ -1,7 +1,7 @@
 #include <algorithm>
 
-template <typename Iterator>
-void insertion_sort(Iterator first, Iterator last)
+template <typename BideractionalIterator>
+void insertion_sort(BideractionalIterator first, BideractionalIterator last)
 {
 	if (first == last)
 		return;
