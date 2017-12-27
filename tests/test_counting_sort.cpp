@@ -1,5 +1,5 @@
 #include <catch.hpp>
-#include <algorithms>
+#include <algorithm>
 #include "counting_sort.h"
 
 //////////////////////////////////// Сортировка рандомных массивов длины 1, 10, 100, 500 и 1000 ////////////////////////////////////
