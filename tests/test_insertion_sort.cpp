@@ -1,5 +1,5 @@
 #include "insertion_sort.h"
-#include <algorithms>
+#include <algorithm>
 #include <catch.hpp>
 #include <ctime>
 //////////////////////////////////// Сортировка рандомных массивов длины 1, 10, 100, 500 и 1000 ////////////////////////////////////
