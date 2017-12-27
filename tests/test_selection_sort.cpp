@@ -1,6 +1,7 @@
-#include <catch.hpp>
 #include "selection_sort.h"
+#include <catch.hpp>
 #include <ctime>
+#include <algorithm>
 //////////////////////////////////// Сортировка рандомных массивов длины 1, 10, 100, 500 и 1000 ////////////////////////////////////
 
 TEST_CASE("selection_sort", "N=1")
