@@ -1,6 +1,7 @@
 #include <iostream> 
 #include <ctime> 
 #include <utility>
+#include <algorithm>
 
 template <typename  ForwardIterator, typename FindMin>
 void merge_sort(ForwardIterator first, ForwardIterator last, FindMin min, size_t size = 0)
